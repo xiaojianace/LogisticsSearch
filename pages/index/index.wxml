@@ -13,7 +13,7 @@
    <button class="search" bindtap="search">查询</button>
    <view wx:for-items="{{returndata}}" wx:for-item="item">
    <text>{{item.AcceptTime}}</text>
-   <text>{{item.AcceptStation}}</text>
+   <text>{{item.AcceptStation}}\n\n</text>
    </view> 
   </view>
  
