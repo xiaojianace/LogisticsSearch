@@ -11,10 +11,10 @@
     </view>
     <input placeholder="请输入快递单号" value="{{kddh}}" class="kddhclass" bindinput="bindkddhinput"/>
    <button class="search" bindtap="search">查询</button>
-   <textarea wx:for-items="{{returndata}}" wx:for-item="item">
+   <view wx:for-items="{{returndata}}" wx:for-item="item">
    <text>{{item.AcceptTime}}</text>
    <text>{{item.AcceptStation}}</text>
-   </textarea> 
+   </view> 
   </view>
  
 </view>
