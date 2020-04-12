@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <!-- <input placeholder="请输入快递公司（申通/中通/圆通）" value="{{kdgs}}" bindinput="bindkdgsinput" /> -->
+     请选择快递公司
+     <view class="select" catchtap="selectTap" value="{{kdgs}}">
+      <text class="select_text">{{selectData[index]}}</text>
+    </view>
+     <view class='option_box' style='height:{{show?(selectData.length>3?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
+    <input placeholder="请输入快递单号" value="{{kddh}}" class="kddhclass" bindinput="bindkddhinput"/>
+   <button class="search" bindtap="search">查询</button>
+   <textarea wx:for-items="{{returndata}}" wx:for-item="item">
+   <text>{{item.AcceptTime}}</text>
+   <text>{{item.AcceptStation}}</text>
+   </textarea> 
+  </view>
+ 
+</view>
